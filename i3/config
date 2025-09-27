@@ -16,6 +16,9 @@
 focus_follows_mouse no
 set $mod Mod1
 
+# System tray autostart
+#exec_always --no-startup-id volumeicon
+
 # No borders
 default_border pixel 0
 default_floating_border pixel 0
