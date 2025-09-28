@@ -13,18 +13,24 @@
 #gtk-icon-theme = "Numix-Circle"
 
 #for_window [class=".*'] floating enable
-focus_follows_mouse no
+focus_follows_mouse yes
 set $mod Mod1
+
+# tty-clock
+exec_always --no-startup-id kitty -e tty-clock -C 7 -c -b
+
+# cava
+#exec_always --no-startup-id kitty -e cava
 
 # System tray autostart
 #exec_always --no-startup-id volumeicon
 
-# No borders
+# Borders
 default_border pixel 0
 default_floating_border pixel 0
 
 # Window gaps
-gaps inner 12
+gaps inner 20
 gaps outer 0
 smart_gaps off
 
@@ -38,7 +44,7 @@ exec --no-startup-id tint2
 exec --no-startup-id xrandr --output eDP-1 --off --output HDMI-1 --mode 1920x1080 --rate 143.60
 
 # Wallpaper with feh
-exec --no-startup-id feh --bg-fill ~/Pictures/wallhaven-949w0z.jpg
+exec_always --no-startup-id feh --bg-scale ~/Pictures/wallhaven-nz7emv-blue.jpg
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
